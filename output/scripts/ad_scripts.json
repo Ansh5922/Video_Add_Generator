@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-09-25T21:02:41.764058",
+  "product": "CrowdWisdom Trading",
+  "url": "crowdwisdomtrading.com",
+  "target_icp": "retail traders, swing traders, investors aged 25-55",
+  "total_scripts": 3,
+  "scripts": [
+    {
+      "type": "A",
+      "name": "Pain-First Hook",
+      "duration_seconds": 40,
+      "visual_hook": "YOU'VE BEEN TRADING WRONG THIS WHOLE TIME",
+      "hook_emotion": "fear",
+      "chart_title": "Solo Trader vs Crowd Wisdom (60 Days)",
+      "scene_2_text": "10,000 PRO TRADERS CAN'T ALL BE WRONG",
+      "voiceover": "You spend hours every week analyzing charts. Watching YouTube. Reading Reddit. And still... you're losing. Sound familiar? Here's the truth: 87% of retail traders lose money. Not because they're stupid. Because they're trading alone. What if you could tap into the collective wisdom of 10,000 professional traders — every single week? CrowdWisdom does exactly that. We aggregate signals from pro traders across YouTube, Reddit, and X to give you a simple weekly briefing. Entry zone. Stop loss. Profit targets. No noise. Just consensus. Join 50,000 traders who stopped guessing. Start free at crowdwisdomtrading.com.",
+      "storyboard": [
+        {
+          "scene": 1,
+          "duration": 4,
+          "visual": "Dark screen with bold white text on navy background",
+          "voiceover_line": "You spend hours every week analyzing charts.",
+          "text_overlay": "YOU'VE BEEN TRADING WRONG",
+          "emotion": "tension",
+          "camera": "close-up"
+        },
+        {
+          "scene": 2,
+          "duration": 8,
+          "visual": "Split-screen chart: red declining line vs green ascending line",
+          "voiceover_line": "87% of retail traders lose money. Not because they're stupid — because they trade alone.",
+          "text_overlay": "87% LOSE MONEY TRADING ALONE",
+          "emotion": "shock",
+          "camera": "zoom-in"
+        },
+        {
+          "scene": 3,
+          "duration": 8,
+          "visual": "Data visualization: 10,000 trader dots converging on a signal",
+          "voiceover_line": "What if 10,000 professional traders told you exactly what they're buying — before the market moves?",
+          "text_overlay": "10,000+ PRO TRADERS",
+          "emotion": "hope",
+          "camera": "wide"
+        },
+        {
+          "scene": 4,
+          "duration": 6,
+          "visual": "Clean stats board: stats on dark background",
+          "voiceover_line": "CrowdWisdom. 73% win rate. 15 minutes a week. Free to start.",
+          "text_overlay": "73% WIN RATE · 15 MIN/WEEK",
+          "emotion": "relief",
+          "camera": "pan"
+        },
+        {
+          "scene": 5,
+          "duration": 6,
+          "visual": "Gold CTA button: crowdwisdomtrading.com",
+          "voiceover_line": "Stop guessing. Start winning. Join free at crowdwisdomtrading.com.",
+          "text_overlay": "START FREE TODAY",
+          "emotion": "excitement",
+          "camera": "zoom-out"
+        }
+      ],
+      "cta": "Start Free Today",
+      "stats": {
+        "10,000+ Pro Traders": "Aggregated weekly",
+        "73% Win Rate": "Crowd consensus",
+        "Free to Start": "No credit card",
+        "15 min/week": "Time to implement"
+      },
+      "pain_addressed": "Losing money despite hours of solo research",
+      "unique_angle": "Collective intelligence from traders with real money on the line",
+      "generated_at": "2026-09-25T21:02:07.340963"
+    },
+    {
+      "type": "B",
+      "name": "Data-Proof Hook",
+      "duration_seconds": 40,
+      "visual_hook": "87% OF TRADERS LOSE. HERE'S WHY.",
+      "hook_emotion": "shock",
+      "chart_title": "Crowd Intelligence vs Solo Trading — 60-Day Performance",
+      "scene_2_text": "THE 13% WHO WIN DON'T TRADE ALONE",
+      "voiceover": "87% of retail traders lose money. That's not an opinion. That's data. And the 13% who consistently win? They're not smarter. They're not luckier. They just don't trade alone. CrowdWisdom monitors 10,000 professional traders across every major platform. Every week, we distill their collective insight into a single, actionable briefing. Exact entry zones. Clear stop losses. Multiple profit targets. Based on real consensus — not algorithms. Not gut feelings. Actual traders with real money on the line. 73% average win rate. 15 minutes a week. And you can start completely free. The crowd already knows where the market is going. The question is — are you listening? crowdwisdomtrading.com",
+      "storyboard": [
+        {
+          "scene": 1,
+          "duration": 4,
+          "visual": "Large percentage counter animation counting up to 87%",
+          "voiceover_line": "87% of retail traders lose money.",
+          "text_overlay": "87%",
+          "emotion": "shock",
+          "camera": "zoom-in"
+        },
+        {
+          "scene": 2,
+          "duration": 7,
+          "visual": "Data visualization of 10,000 trader nodes",
+          "voiceover_line": "The 13% who win don't trade alone. They follow the crowd.",
+          "text_overlay": "THE 13% SECRET",
+          "emotion": "curiosity",
+          "camera": "wide"
+        },
+        {
+          "scene": 3,
+          "duration": 8,
+          "visual": "Performance chart showing crowd wisdom outperforming",
+          "voiceover_line": "CrowdWisdom aggregates 10,000 pro traders into one weekly signal. 73% win rate.",
+          "text_overlay": "73% WIN RATE",
+          "emotion": "hope",
+          "camera": "pan"
+        },
+        {
+          "scene": 4,
+          "duration": 8,
+          "visual": "Clean stats board on dark background",
+          "voiceover_line": "Entry zones. Stop losses. Profit targets. 15 minutes a week. Free to start.",
+          "text_overlay": "15 MIN/WEEK · FREE TO START",
+          "emotion": "relief",
+          "camera": "zoom-out"
+        },
+        {
+          "scene": 5,
+          "duration": 5,
+          "visual": "CTA with gold button",
+          "voiceover_line": "The crowd knows. crowdwisdomtrading.com",
+          "text_overlay": "JOIN THE 13%",
+          "emotion": "excitement",
+          "camera": "close-up"
+        }
+      ],
+      "cta": "Join The 13%",
+      "stats": {
+        "87% of traders lose": "without crowd intel",
+        "10,000+ Pros": "monitored weekly",
+        "73% Win Rate": "crowd consensus",
+        "Free Tier": "start today"
+      },
+      "pain_addressed": "Poor win rate, lack of credible signals",
+      "unique_angle": "Statistical proof that crowd intelligence outperforms solo trading",
+      "generated_at": "2026-09-25T21:02:24.342125"
+    },
+    {
+      "type": "C",
+      "name": "Transformation Hook",
+      "duration_seconds": 40,
+      "visual_hook": "WHAT IF THE CROWD ALREADY KNEW?",
+      "hook_emotion": "curiosity",
+      "chart_title": "Before CrowdWisdom vs After (Portfolio Performance)",
+      "scene_2_text": "STOP GUESSING. START FOLLOWING.",
+      "voiceover": "What if the answer was already out there — hidden in the collective wisdom of 10,000 professional traders? Every week, they share their best ideas on YouTube, Reddit, and X. They debate entries. Argue about targets. They have conviction — and real money behind it. CrowdWisdom's AI agents listen to all of them. And every week, we send you the consensus. Where the crowd is buying. Where they're selling. What they're holding. You go from 40 hours of chaotic research to 15 minutes of clarity. From guessing alone to following the wisdom of thousands. This is how the smart money thinks. And now it's available to you. Free at crowdwisdomtrading.com.",
+      "storyboard": [
+        {
+          "scene": 1,
+          "duration": 4,
+          "visual": "Dark scene, single trader alone at desk with multiple monitors showing conflicting signals",
+          "voiceover_line": "What if the answer was already out there?",
+          "text_overlay": "WHAT IF YOU DIDN'T HAVE TO GUESS?",
+          "emotion": "tension",
+          "camera": "wide"
+        },
+        {
+          "scene": 2,
+          "duration": 7,
+          "visual": "Montage of trader voices across platforms converging",
+          "voiceover_line": "10,000 professional traders share their best ideas every week. CrowdWisdom listens to all of them.",
+          "text_overlay": "10,000 TRADERS · ONE SIGNAL",
+          "emotion": "curiosity",
+          "camera": "zoom-in"
+        },
+        {
+          "scene": 3,
+          "duration": 8,
+          "visual": "Before/after split: chaotic charts vs clean weekly briefing",
+          "voiceover_line": "From 40 hours of chaos to 15 minutes of clarity.",
+          "text_overlay": "40 HRS → 15 MIN/WEEK",
+          "emotion": "relief",
+          "camera": "pan"
+        },
+        {
+          "scene": 4,
+          "duration": 8,
+          "visual": "Green portfolio growth chart",
+          "voiceover_line": "73% win rate. Real consensus. Real traders. Real results.",
+          "text_overlay": "73% WIN RATE · REAL TRADERS",
+          "emotion": "excitement",
+          "camera": "zoom-out"
+        },
+        {
+          "scene": 5,
+          "duration": 5,
+          "visual": "Gold CTA on dark background, crowdwisdomtrading.com",
+          "voiceover_line": "The crowd knows. Follow them. Free at crowdwisdomtrading.com.",
+          "text_overlay": "START FREE",
+          "emotion": "hope",
+          "camera": "close-up"
+        }
+      ],
+      "cta": "Follow The Crowd",
+      "stats": {
+        "Before": "40 hrs research, 60% loss rate",
+        "After": "15 min/week, 73% win rate",
+        "Join Free": "crowdwisdomtrading.com",
+        "10,000+ Pros": "can't all be wrong"
+      },
+      "pain_addressed": "Wasted time, information overload, trading alone",
+      "unique_angle": "Transformation from isolated trader to crowd-powered decision maker",
+      "generated_at": "2026-09-25T21:02:41.763120"
+    }
+  ]
+}

@@ -41,7 +41,9 @@ venv.bak/
 Thumbs.db
 
 # Output (generated at runtime)
-output/
+# Track JSON outputs (ads, scripts) but NOT large video/frame files
+output/frames/
+output/videos/
 *.mp4
 *.avi
 *.mov
