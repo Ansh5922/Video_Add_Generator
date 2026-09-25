@@ -1,0 +1,33 @@
+# CrowdWisdom Video Ad Agent - Requirements
+
+# ─── Core LLM / Agent ─────────────────────────────────────────────────────────
+openai>=1.35.0               # OpenRouter uses OpenAI-compatible API
+
+# ─── Data scraping & search ───────────────────────────────────────────────────
+apify-client>=1.7.0
+tavily-python>=0.3.3
+
+# ─── HTTP / Async ─────────────────────────────────────────────────────────────
+httpx>=0.27.0
+requests>=2.31.0
+aiohttp>=3.9.0
+
+# ─── Video & Image generation ─────────────────────────────────────────────────
+ffmpeg-python>=0.2.0
+Pillow>=10.3.0
+matplotlib>=3.9.0
+numpy>=1.26.0
+
+# ─── Text-to-speech (narration) ───────────────────────────────────────────────
+gTTS>=2.5.1
+
+# ─── Data handling ────────────────────────────────────────────────────────────
+pydantic>=2.7.0
+python-dotenv>=1.0.0
+
+# ─── CLI & Terminal UI ────────────────────────────────────────────────────────
+rich>=13.7.0
+click>=8.1.7
+
+# ─── Reliability ──────────────────────────────────────────────────────────────
+tenacity>=8.3.0

@@ -1,0 +1,69 @@
+{
+  "platform_stats": {
+    "traders_monitored": "10,000+",
+    "countries": "40+",
+    "avg_win_rate": "73%",
+    "weekly_signals": "3-5 high-conviction setups",
+    "time_required": "15 minutes/week",
+    "free_tier": true,
+    "pro_price": "$29.99/month",
+    "active_subscribers": "50,000+"
+  },
+  "methodology": {
+    "data_sources": ["YouTube", "Reddit", "X (Twitter)", "TradingView", "StockTwits"],
+    "aggregation_method": "AI agents monitor professional market participants across platforms",
+    "output_format": "Weekly consensus: directional bias, entry zone, stop-loss, profit targets",
+    "unique_edge": "Collective intelligence from traders with real money on the line — not algorithms",
+    "transparency": "Full consensus breakdown visible — no black box"
+  },
+  "proof_points": {
+    "win_rate": "73% average win rate (crowd consensus)",
+    "time_saving": "From 40+ hours/week research to 15 min/week implementation",
+    "vs_solo": "31% better win rate vs solo trading on average",
+    "vs_wall_street": "No conflicts of interest — traders have skin in the game",
+    "signals_accuracy": "Crowd consensus outperforms individual analyst calls"
+  },
+  "unique_value_propositions": [
+    "Not an algorithm — aggregated from real human traders with real money at risk",
+    "No black box — full transparency on consensus breakdown",
+    "Weekly briefings only — actionable signals, not constant noise",
+    "Free to start — no credit card required for basic access",
+    "Contributors include traders from Goldman Sachs, Citadel, and leading hedge funds",
+    "Monitors 10,000+ professional traders across all major platforms simultaneously"
+  ],
+  "pain_points_addressed": {
+    "information_overload": "Distills thousands of trader opinions into one clear signal",
+    "trading_alone": "Gives you the collective wisdom of a professional trading community",
+    "wasted_time": "Cut research from 40+ hours to 15 minutes per week",
+    "poor_win_rate": "73% win rate vs industry average of 30-40% for retail traders",
+    "fomo_and_fear": "Clear entry/exit signals remove emotional decision-making",
+    "expensive_services": "Free tier with full signal access, no hidden fees"
+  },
+  "competitive_advantages": {
+    "vs_tipranks": "Real traders vs analyst ratings — skin in the game matters",
+    "vs_motley_fool": "Crowd consensus vs editorial picks — no editorial bias",
+    "vs_seeking_alpha": "Actionable signals vs long-form articles — saves 10x time",
+    "vs_discord_groups": "AI aggregation vs manual monitoring — systematic and unbiased"
+  },
+  "testimonial_themes": [
+    "Stopped losing money after I started following the crowd consensus",
+    "Went from 40% to 71% win rate in 3 months",
+    "I spend 15 minutes on Sunday reviewing the briefing — that's my entire research week",
+    "Finally found a service where I understand WHY the signal exists",
+    "The transparency is what got me. I can see exactly what the consensus is based on."
+  ],
+  "visual_proof_elements": {
+    "chart_data": {
+      "solo_trader_60d_return": -38,
+      "crowd_wisdom_60d_return": 45,
+      "retail_trader_loss_rate": 87,
+      "crowd_consensus_win_rate": 73
+    },
+    "before_after": {
+      "before_hours_per_week": 40,
+      "after_hours_per_week": 0.25,
+      "before_win_rate": 38,
+      "after_win_rate": 73
+    }
+  }
+}
