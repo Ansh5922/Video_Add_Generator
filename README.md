@@ -1,8 +1,7 @@
 # CrowdWisdom Video Ad Agent — Hermes Multi-Agent System
 
-> **Internship Assessment** · CrowdWisdom Trading · Marketing Lead (AI Agents)
 
-A cinematic video ad generation system powered by **3 AI agents** orchestrated in a **Hermes Kanban** pipeline. The system automatically researches winning ads, extracts marketing insights, creates compelling scripts, and renders a professional 30–60 second video ad for [crowdwisdomtrading.com](https://crowdwisdomtrading.com).
+A cinematic video ad generation system powered by **3 AI agents** orchestrated in a **Hermes Kanban** pipeline. The system automatically researches winning ads, extracts marketing insights, creates compelling scripts, and renders a professional 30–60 second video ad
 
 ---
 
@@ -122,23 +121,3 @@ output/
     └── crowdwisdom_ad_v3.mp4    # Transformation hook video
 ```
 
----
-
-## Evaluation Criteria
-
-- ✅ **3 Working Agents** — AdsManager, Script, Video
-- ✅ **Hermes Kanban** — Rich terminal Kanban board showing pipeline
-- ✅ **Apify** — Meta Ads Library scraper integrated
-- ✅ **Tavily** — Real-time ICP research
-- ✅ **Cinematic Output** — "Wow" factor via color grading, charts, animation
-- ✅ **GitHub Ready** — Clean repo, .env.example, full README
-- ✅ **JSON Outputs** — Human-readable ads and scripts saved to disk
-
----
-
-## Submission
-
-Repository by: [YOUR NAME]  
-Contact: gilad@crowdwisdomtrading.com
-
-**API Tokens for re-running (provided separately by email)**
