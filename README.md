@@ -78,6 +78,7 @@ cp .env.example .env
 
 ### Run
 ```bash
+$env:PYTHONIOENCODING="utf-8"
 # Full pipeline (all 3 agents + Kanban UI)
 python main.py
 
