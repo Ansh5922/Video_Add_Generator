@@ -1,0 +1,245 @@
+================================================================================
+ UNIVERSAL AI VIDEO AD AGENT — END-TO-END SYSTEM BLUEPRINT & ARCHITECTURE
+================================================================================
+
+1. PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+This project transforms the existing CrowdWisdom video agent into an end-to-end,
+universal AI Video Ad Generation platform. Users can enter ANY product, brand,
+service, or startup details (URL, product description, target audience, niche,
+and campaign goal). The platform then orchestrates a 3-agent pipeline to:
+  1. Research competitor ads and extract audience psychology & hooks.
+  2. Write 3 cinematic, high-converting video ad scripts (Pain, Proof, Transformation).
+  3. Render 1080p cinematic MP4 video ads featuring custom motion graphics, charts,
+     relevant stock media, natural neural voiceovers, and Hollywood color grading.
+
+The platform is exposed via a high-performance FastAPI backend with real-time SSE
+progress updates and a clean, minimalist React SaaS frontend dashboard with review
+checkpoints at every step.
+
+
+2. CORE SYSTEM ARCHITECTURE & MONOREPO LAYOUT
+--------------------------------------------------------------------------------
+The repository will be structured as a clean, modular monorepo:
+
+crowdwisdom-video-agent/
+│
+├── backend/                        # FastAPI Backend Application
+│   ├── app/
+│   │   ├── api/                    # API Endpoints
+│   │   │   ├── routes_campaign.py  # Campaign CRUD & state management
+│   │   │   ├── routes_research.py  # Agent 1: Competitor research & insights
+│   │   │   ├── routes_scripts.py   # Agent 2: Script generation & editing
+│   │   │   ├── routes_video.py     # Agent 3: Video rendering & streaming
+│   │   │   └── routes_stream.py    # SSE real-time log/Kanban event stream
+│   │   ├── core/
+│   │   │   ├── config.py           # App settings & env loading
+│   │   │   └── events.py           # PubSub / event bus for real-time SSE events
+│   │   ├── schemas/                # Pydantic schemas (Request/Response models)
+│   │   │   ├── campaign.py
+│   │   │   ├── research.py
+│   │   │   ├── script.py
+│   │   │   └── video.py
+│   │   ├── agents/                 # Refactored Multi-Agent Pipeline
+│   │   │   ├── base_agent.py       # Hermes agent base class with event callbacks
+│   │   │   ├── ads_manager_agent.py# Generalized ad research & psychological analysis
+│   │   │   ├── script_agent.py     # Dynamic multi-type scriptwriter
+│   │   │   └── video_agent.py      # Video rendering coordinator
+│   │   ├── tools/                  # Tool modules
+│   │   │   ├── apify_tool.py       # Dynamic Meta Ads Library scraper (+ robust fallback)
+│   │   │   ├── tavily_tool.py      # Live web research & pain point discovery
+│   │   │   ├── llm_tool.py         # OpenRouter / OpenAI JSON LLM client
+│   │   │   ├── tts_tool.py         # Edge-TTS neural speech + gTTS fallback
+│   │   │   ├── stock_media_tool.py # Pexels / Unsplash stock image & video fetcher
+│   │   │   └── video_tool.py       # PIL graphics + matplotlib + FFmpeg compositor
+│   │   ├── data/                   # Default datasets, fallbacks, & font assets
+│   │   └── main.py                 # FastAPI application entry point
+│   ├── requirements.txt            # Python dependencies (FastAPI, uvicorn, edge-tts, etc.)
+│   └── run_backend.bat             # Quick launch script for backend
+│
+├── frontend/                       # React (Vite) Frontend Application
+│   ├── src/
+│   │   ├── components/             # Reusable UI components
+│   │   │   ├── Navbar.jsx          # Header with branding and theme toggle
+│   │   │   ├── KanbanStepper.jsx   # Live Kanban / pipeline progress visualizer
+│   │   │   ├── ResearchView.jsx    # Competitor ads table & ICP insights inspector
+│   │   │   ├── ScriptEditor.jsx    # 3-script tab viewer, scene storyboard editor
+│   │   │   ├── VideoPlayerModal.jsx# Cinematic video player with download & stats
+│   │   │   └── LiveLogConsole.jsx  # Real-time streaming logs terminal drawer
+│   │   ├── pages/                  # Main views
+│   │   │   ├── Dashboard.jsx       # Studio dashboard with multi-step review wizard
+│   │   │   └── History.jsx         # Saved campaigns and generated videos list
+│   │   ├── services/
+│   │   │   └── api.js              # Axios / Fetch client + SSE EventSource hook
+│   │   ├── App.jsx                 # Main layout & router
+│   │   ├── index.css               # Clean minimalist design tokens & styling
+│   │   └── main.jsx                # React root
+│   ├── package.json
+│   ├── vite.config.js
+│   └── run_frontend.bat            # Quick launch script for frontend
+│
+├── output/                         # Generated artifacts (campaign JSONs, MP4s, frames)
+├── run_dev.bat                     # Launches both backend and frontend simultaneously
+└── doc.text                        # This architecture & implementation plan
+
+
+3. USER EXPERIENCE & WORKFLOW (MULTI-STEP STUDIO)
+--------------------------------------------------------------------------------
+The user operates through an interactive 4-step studio with full review checkpoints:
+
+STEP 1: CAMPAIGN ONBOARDING & INPUT FORM
+- User enters:
+  * Product / Brand Name (e.g. "FinPulse AI", "EcoClean", "SaaSMetrics")
+  * Product URL / Landing Page
+  * Product Description & Key Features
+  * Target Audience / ICP (e.g., "Freelancers, 25-45, struggling with invoices")
+  * Ad Goal (Sign-ups, Sales, Brand Awareness, Free Trial)
+  * Visual Tone & Voice Choice (Deep Male, Clear Female, British, Conversational)
+- User clicks "Start Deep Research"
+
+STEP 2: RESEARCH & INSIGHTS CHECKPOINT
+- Real-time SSE Kanban board tracks:
+  [Scraping Meta Ads] -> [Ranking Competitor Ads] -> [Extracting ICP & Pain Points]
+- User reviews:
+  * Top scraped winning competitor ads (Ad copy, headlines, CTA, score)
+  * Target Audience Persona (Daily frustration, biggest fear, buying triggers)
+  * Proven emotional hooks & power keywords
+- User can tweak or approve the insights, then clicks "Generate Ad Scripts"
+
+STEP 3: SCRIPT REVIEW & STORYBOARD EDITOR CHECKPOINT
+- Agent 2 generates 3 tailored cinematic scripts:
+  * Script A: Pain-First Hook ("Tired of spending 5 hours doing manual invoices?")
+  * Script B: Data-Proof Hook ("78% of freelancers lose money on unpaid bills...")
+  * Script C: Transformation Hook ("What if your finances managed themselves?")
+- User inspects each script's:
+  * Hook line & hook emotion
+  * Scene-by-scene storyboard (Visual action, narration sentence, timing)
+  * Audio voiceover preview (synthesizes audio sample on demand)
+  * Call to Action (CTA)
+- User can edit any text, select which version(s) to render, and clicks "Render Video"
+
+STEP 4: VIDEO RENDERING & CINEMATIC PREVIEW
+- Agent 3 renders the video with live progress updates:
+  * Frame Generation (Procedural branding + Stock imagery for scene context)
+  * Matplotlib / Graphic rendering (Custom metrics tailored to product)
+  * Neural Audio narration via Edge-TTS
+  * FFmpeg assembly (Ken Burns motion, fade transitions, teal-orange grading)
+- User watches the finished 1080p MP4 in the built-in video player.
+- Download MP4 button and export options.
+
+
+4. BACKEND API SPECIFICATIONS (FASTAPI)
+--------------------------------------------------------------------------------
+Base URL: http://localhost:8000/api
+
+1. POST /api/campaign/init
+   Request: { product_name, product_url, description, target_icp, goal, tone }
+   Response: { campaign_id, status: "created" }
+
+2. POST /api/campaign/{campaign_id}/research
+   Triggers Agent 1 (Ads Manager Agent)
+   Response: {
+     winning_ads: [...],
+     insights: { icp_profile, proven_hooks, winning_concepts, emotional_triggers }
+   }
+
+3. POST /api/campaign/{campaign_id}/scripts
+   Request: { (optional edited insights) }
+   Triggers Agent 2 (Script Agent)
+   Response: {
+     scripts: [
+       { id: "v1", type: "A", name: "Pain-First", voiceover, storyboard: [...], cta },
+       { id: "v2", type: "B", name: "Data-Proof", voiceover, storyboard: [...], cta },
+       { id: "v3", type: "C", name: "Transformation", voiceover, storyboard: [...], cta }
+     ]
+   }
+
+4. POST /api/campaign/{campaign_id}/render
+   Request: { script_id: "v1", script_data: { ... }, voice: "en-US-ChristopherNeural" }
+   Triggers Agent 3 (Video Agent)
+   Response: { job_id, status: "rendering" }
+
+5. GET /api/campaign/{campaign_id}/stream
+   Server-Sent Events (SSE) endpoint:
+   Emits real-time JSON packets:
+   { agent: "Video Agent", task: "render_frames", progress: 65, message: "Composing scene 3..." }
+
+6. GET /api/campaign/{campaign_id}/videos/{video_filename}
+   File streaming endpoint to watch or download the rendered MP4.
+
+7. GET /api/campaigns
+   Lists previously generated campaigns and video assets.
+
+
+5. MEDIA & RENDERING ENGINES
+--------------------------------------------------------------------------------
+A. Neural Voice Synthesis (Edge-TTS)
+- 100% free, zero API key required, ultra-realistic human quality.
+- Voices supported:
+  * English US Male: `en-US-ChristopherNeural`
+  * English US Female: `en-US-JennyNeural`
+  * English UK Male: `en-GB-RyanNeural`
+  * English UK Female: `en-GB-SoniaNeural`
+- Fallback: gTTS (Google Text to Speech) and optional ElevenLabs API key.
+
+B. Dynamic Visual Hybrid Engine
+- Scene-Adaptive Imagery:
+  * Script scenes describe visual hooks (e.g. "Frustrated person at laptop", "Modern tech office").
+  * Backend queries Pexels/Unsplash free API (with offline aesthetic gradients as fallback)
+    to retrieve high-resolution contextual background stills matching each scene.
+- Dynamic Charts & Data:
+  * If the script includes metrics (e.g., ROI, hours saved, accuracy), Matplotlib generates
+    a custom dark/modern visualization specific to the user's product.
+- Ken Burns & Compositing:
+  * High-definition PIL typography with drop-shadows and subtle vignette.
+  * FFmpeg zoom/pan filters, cross-fades, and teal-orange color grading curves.
+
+
+6. FRONTEND DESIGN SYSTEM (CLEAN MINIMALIST SAAS)
+--------------------------------------------------------------------------------
+- Framework: React 18+ via Vite.
+- Design Principles:
+  * Modern, airy, and clean layout with subtle borders and balanced contrast.
+  * Light & dark mode support.
+  * Functional typography (Inter / Plus Jakarta Sans).
+  * Clear step-indicator tabs (1. Details -> 2. Research -> 3. Scripts -> 4. Video).
+  * Dedicated inspector panels for ad copy, competitor cards, and storyboard scenes.
+  * Clean modal video player with scrubbing, duration, and download options.
+  * Real-time collapsible terminal drawer displaying live agent execution logs.
+
+
+7. STEP-BY-STEP IMPLEMENTATION ROADMAP
+--------------------------------------------------------------------------------
+PHASE 1: BACKEND FOUNDATION & AGENT GENERALIZATION
+- Create `backend/` directory structure.
+- Add FastAPI application, CORS middleware, and Pydantic request/response schemas.
+- Generalize `tools/apify_tool.py`, `tools/tavily_tool.py`, and `tools/llm_tool.py`
+  to dynamically accept any product name, keywords, and niche.
+- Implement `backend/app/tools/tts_tool.py` supporting `edge-tts` with `gTTS` fallback.
+- Implement `backend/app/tools/stock_media_tool.py` for scene-matched visuals.
+- Adapt `video_tool.py` to support dynamic product branding, custom metrics, and
+  variable scene images.
+
+PHASE 2: FASTAPI APIS & SERVER-SENT EVENTS
+- Build campaign management routes (`/api/campaign/init`).
+- Implement the research route (`/api/campaign/{id}/research`) executing Agent 1.
+- Implement the script generation route (`/api/campaign/{id}/scripts`) executing Agent 2.
+- Implement the video render route (`/api/campaign/{id}/render`) executing Agent 3.
+- Build the SSE broadcaster in `events.py` and hook it into `HermesAgent` task progress.
+- Enable static video file serving with byte-range support for video playback.
+
+PHASE 3: REACT FRONTEND IMPLEMENTATION
+- Initialize Vite React project in `frontend/`.
+- Build the Clean Minimalist SaaS layout and design system.
+- Build Step 1: Product Input Form with presets and customizable options.
+- Build Step 2: Research & Ad Competitors Inspector.
+- Build Step 3: Script & Storyboard Editor (with scene text, timing, and voice previews).
+- Build Step 4: Real-time Kanban Stepper and Cinematic Video Player.
+- Connect React frontend to FastAPI backend and SSE event stream.
+
+PHASE 4: VERIFICATION & LAUNCH
+- Test end-to-end generation with multiple varied niches (e.g. SaaS product, E-commerce brand, Local service).
+- Verify neural voice synthesis and audio synchronization.
+- Verify FFmpeg rendering, frame transitions, and video download capabilities.
+- Create automated launch scripts (`run_backend.bat`, `run_frontend.bat`, `run_dev.bat`).
+================================================================================
